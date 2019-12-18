@@ -22,6 +22,7 @@ $config = [
         'user' => [
             'identityClass' => 'app\models\User',
            'enableAutoLogin' => true,
+            'loginUrl' => ['notary/login'],
         ],
         'errorHandler' => [
             'errorAction' => 'site/error',
@@ -48,6 +49,7 @@ $config = [
             'enablePrettyUrl' => true,
             'showScriptName' => false,
             'rules' => [
+
             ],
         ],
 

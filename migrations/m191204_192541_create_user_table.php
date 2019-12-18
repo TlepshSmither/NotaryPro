@@ -14,8 +14,8 @@ class m191204_192541_create_user_table extends Migration
     {
         $this->createTable('user', [
             'id' => $this->primaryKey(),
-            'email' => $this->string(100),
-            'password' => $this->string(255),
+            'email' => $this->string(50),
+            'password' => $this->string(50),
         ]);
     }
 
@@ -24,6 +24,6 @@ class m191204_192541_create_user_table extends Migration
      */
     public function down()
     {
-
+        $this->dropTable('user');
     }
 }

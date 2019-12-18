@@ -38,11 +38,12 @@ AppAsset::register($this);
     echo Nav::widget([
         'options' => ['class' => 'navbar-nav navbar-right'],
         'items' => [
-            ['label' => 'Home', 'url' => ['/notary/index']],
+//            ['label' => 'Home', 'url' => ['/notary/login']],
             ['label' => 'Login', 'url' => ['/notary/login']],
-            ['label' => 'Signup', 'url' => ['/notary/signup']],
+            ['label' => 'Upload', 'url' => ['/notary/upload']],
+            ['label' => 'Registration', 'url' => ['/notary/signup']],
             Yii::$app->user->isGuest ? (
-                ['label' => 'Blogin', 'url' => ['/site/login']]
+                ['label' => 'Logout', 'url' => ['/notary/logout']]
             ) : (
                 '<li>'
                 . Html::beginForm(['/notary/logout'], 'post')

@@ -22,12 +22,12 @@ class Login extends Model {
 
             $user=$this->getUser(); // получаем пользователя для дальнейшего сравнения пароля
 
-            if(!$user || !$user->validatePassword($this->password)){
-                // если не находим в базе данных такого пользователя
-                // или пароль в базе не найден
-                $this->addError($attribute, 'Password or User not find!');
-                // добавляем новую ошибку для аттрибута password что User не найден
-            }
+//            if(!$user || !$user->validatePassword($this->password)){
+//                // если не находим в базе данных такого пользователя
+//                // или пароль в базе не найден
+//                $this->addError($attribute, 'Password or User not find!');
+//                // добавляем новую ошибку для аттрибута password что User не найден
+//            }
         }
     }
     public function getUser(){
