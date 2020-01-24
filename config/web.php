@@ -14,7 +14,7 @@ $config = [
     'components' => [
         'request' => [
             // !!! insert a secret key in the following (if it is empty) - this is required by cookie validation
-            'cookieValidationKey' => 'rtxcgfxcxchxchxchxch',
+            'cookieValidationKey' => 'fill in a secret key here',
         ],
         'cache' => [
             'class' => 'yii\caching\FileCache',
@@ -49,6 +49,7 @@ $config = [
             'enablePrettyUrl' => true,
             'showScriptName' => false,
             'rules' => [
+                '' => 'notary/index',
             ],
         ],
 

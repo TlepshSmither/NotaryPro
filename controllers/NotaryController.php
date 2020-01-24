@@ -3,6 +3,8 @@
 namespace app\controllers;
 
 use app\models\Login;
+use yii\filters\AccessControl;
+use yii\filters\VerbFilter;
 use yii\helpers\Url;
 use Yii;
 use app\models\Signup;
@@ -12,10 +14,33 @@ use yii\web\UploadedFile;
 // password in katakan1@yandex.ru  -> qwerty
 class NotaryController extends \yii\base\Controller
 {
+//    public function behaviors()
+//    {
+//        return [
+//          'access' => [
+//              'class' => AccessControl::className(),
+//              'only' => ['logout', 'login', 'signup', 'upload'],
+//              'rules' => [
+//                  [
+//                      'actions' => ['login', 'signup'],
+//                      'allow' => true,
+//                      'roles' => ['?'],
+//                  ],
+//                  [
+//                      'actions' => ['upload', 'logout'],
+//                      'allow' => true,
+//                      'roles' => ['@'],
+//
+//                  ]
+//              ],
+//          ],
+//        ];
+//    }
 
     public function actionIndex(){
         return $this->render('index');
     }
+
     public function actionLogout(){
         Yii::$app->user->logout();
         Yii::$app->response->redirect(Yii::$app->urlManager->createAbsoluteUrl(['notary/login']));

@@ -1,7 +1,7 @@
 <h1>Registratio</h1>
 <?php
 use yii\helpers\Html;
-use yii\widgets\ActiveForm;
+use yii\bootstrap\ActiveForm;
 ?>
 <?php $form = ActiveForm::begin(); ?>
 
@@ -9,8 +9,11 @@ use yii\widgets\ActiveForm;
 
 <?= $form->field($model, 'password')->passwordInput() ?>
 
+<?= $form->field($model, 'typeUser')->dropDownList(['1'=> 'notary', '2'=>'client'],
+['prompt' => 'Choose your role']) ?>
+
 <div class="form-group">
-    <?= Html::submitButton('Отправить', ['class' => 'btn btn-primary']) ?>
+    <?= Html::submitButton('Отправить', ['class' => 'btn btn-warning']) ?>
 </div>
 
 <?php ActiveForm::end(); ?>
